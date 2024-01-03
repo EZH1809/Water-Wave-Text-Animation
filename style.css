@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #e8e8e8;
+}
+.content {
+  position: relative;
+}
+.content h2 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 15em;
+}
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 3px #333;
+  filter: blur(3px);
+}
+.content h2:nth-child(3) {
+  color: #fff6;
+  filter: drop-shadow(0 15px 15px #fff);
+  z-index: 1;
+  text-shadow: -15px 15px 15px rgba(0, 0, 0, 0.2),
+    15px -15px 15px rgba(255, 255, 255, 0.2);
+}
+.content h2:nth-child(2) {
+  color: #03a9f4;
+  z-index: 2;
+  animation: animate 4s ease-in-out infinite;
+}
+/* ---- https://bennettfeely.com/clippy/ ---- */
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      1% 64%,
+      9% 57%,
+      17% 50%,
+      26% 48%,
+      33% 49%,
+      41% 54%,
+      47% 58%,
+      53% 65%,
+      62% 72%,
+      68% 77%,
+      74% 77%,
+      83% 75%,
+      91% 71%,
+      99% 66%,
+      100% 99%,
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      1% 80%,
+      10% 80%,
+      19% 78%,
+      29% 77%,
+      41% 74%,
+      47% 70%,
+      54% 65%,
+      66% 60%,
+      78% 60%,
+      86% 62%,
+      93% 66%,
+      100% 72%,
+      100% 98%,
+      1% 100%
+    );
+  }
+}
